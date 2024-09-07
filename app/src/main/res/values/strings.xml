@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">drink-me</string>
+    <string name="app_welcome">Bem vindo ao Drink Me!</string>
+    <string name="value100">100 ml</string>
+    <string name="value200">200 ml</string>
+    <string name="value500">500 ml</string>
+    <string name="value700">700 ml</string>
+    <string name="value1000">1 L</string>
+    <string name="value1500">1.5 L</string>
+    <string name="clear"> Limpar </string>
+    <string name="weight">Insira seu peso:</string>
+    <string name="save">Salvar</string>
+</resources>
