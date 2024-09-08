@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.drink_me"
+    namespace = "com.gustavohnsv.drink_me"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.drink_me"
+        applicationId = "com.gustavohnsv.drink_me"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

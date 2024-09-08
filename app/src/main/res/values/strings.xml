@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">drink-me</string>
+    <string name="app_name">Drink Me!</string>
     <string name="app_welcome">Bem vindo ao Drink Me!</string>
     <string name="value100">100 ml</string>
     <string name="value200">200 ml</string>
@@ -10,4 +10,5 @@
     <string name="clear"> Limpar </string>
     <string name="weight">Insira seu peso:</string>
     <string name="save">Salvar</string>
+    <string name="switch_records">Trocar de tela</string>
 </resources>

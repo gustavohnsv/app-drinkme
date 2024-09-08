@@ -9,52 +9,55 @@
     tools:layout_editor_absoluteY="48dp">
 
     <TextView
-        android:id="@+id/txt_welcome"
-        android:layout_width="234dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/app_welcome"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt_water_total"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <TextView
         android:id="@+id/txt_water_total"
         android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/rounded_background"
         android:fontFamily="@font/roboto"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttons_weight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_welcome" />
-
-    <LinearLayout
-        android:id="@+id/buttons_weight"
-        android:layout_width="342dp"
-        android:layout_height="141dp"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/layout_weight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_welcome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txt_welcome"
+        android:layout_width="234dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/app_welcome"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_weight"
+        app:layout_constraintEnd_toStartOf="@+id/txt_water_total"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_water_total">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/buttons_weight"
+        android:layout_width="286dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/layout_weight"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -124,7 +127,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -140,14 +143,16 @@
 
     <LinearLayout
         android:id="@+id/layout_weight"
-        android:layout_width="209dp"
-        android:layout_height="168dp"
+        android:layout_width="292dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons_weight">
+        app:layout_constraintStart_toEndOf="@+id/buttons_weight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/txt_weight"
@@ -156,7 +161,7 @@
             android:fontFamily="@font/roboto"
             android:text="@string/weight"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <EditText
@@ -171,7 +176,7 @@
         <Button
             android:id="@+id/btn_weight"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:backgroundTint="@color/purple_500"
             android:text="@string/save"
             android:textColor="@color/white" />
