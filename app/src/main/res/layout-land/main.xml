@@ -10,51 +10,48 @@
 
     <TextView
         android:id="@+id/txt_water_total"
-        android:layout_width="124dp"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_background"
         android:fontFamily="@font/roboto"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/layout_weight"
+        app:layout_constraintBottom_toTopOf="@+id/pgbar_waterIntake"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txt_welcome"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome" />
 
     <TextView
         android:id="@+id/txt_welcome"
         android:layout_width="234dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/roboto"
         android:text="@string/app_welcome"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttons_weight"
-        app:layout_constraintEnd_toStartOf="@+id/txt_water_total"
+        app:layout_constraintBottom_toTopOf="@+id/txt_water_total"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <LinearLayout
         android:id="@+id/buttons_weight"
         android:layout_width="286dp"
         android:layout_height="143dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/layout_weight"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -145,7 +142,7 @@
         android:id="@+id/layout_weight"
         android:layout_width="292dp"
         android:layout_height="143dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -189,5 +186,16 @@
             android:text="@string/switch_records"
             android:textColor="@color/white" />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pgbar_waterIntake"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="243dp"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_water_total" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,20 +15,26 @@ class RecordsActivity : AppCompatActivity() {
 
     private val dataStorageUtils = DataStorageUtils.Companion
 
+    private fun adjustRecords() {
+        val recyclerRecords = findViewById<RecyclerView>(R.id.recycler_records)
+        recyclerRecords.layoutManager = LinearLayoutManager(this)
+        recyclerRecords.adapter = DailyRecordsAdapter(dataStorageUtils.getData(context = this))
+    }
+
+    private fun changeToMain() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.records)
 
         val btnMain = findViewById<Button>(R.id.btn_main)
 
-        btnMain.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        btnMain.setOnClickListener { changeToMain() }
 
-        val recyclerRecords = findViewById<RecyclerView>(R.id.recycler_records)
-        recyclerRecords.layoutManager = LinearLayoutManager(this)
-        recyclerRecords.adapter = DailyRecordsAdapter(dataStorageUtils.getData(context = this))
+        adjustRecords()
 
         showLogData()
 
